@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,7 +44,7 @@
         }
        
         header {
-            background: linear-gradient(to right, gold, orange);
+            background: linear-gradient(to right, #4a0080, #8a2be2);
             color: white;
             padding: 20px 0;
             border-bottom: 5px solid #ff9800;
@@ -453,7 +452,7 @@
                 This will mark your exam as completed and you won't be able to retake it.
             </div>
             <button class="btn btn-success" onclick="confirmAttempt()">
-                <i class="fa-solid fa-check-circle"></i> Confirm Exam Attempt
+                <i class="fa-solid fa-check-circle"></i> OK
             </button>
         </div>
        
@@ -534,7 +533,8 @@
        
         <div class="actions-container">
             <button id="printBtn" class="btn">Print Result</button>
-            <button id="dashboardBtn" class="btn btn-secondary" onclick="confirmAttempt()">Back to Dashboard</button>
+            <button id="dashboardBtn"  onclick="confirmAttempt()" class="btn btn-secondary">Sign Out</button>
+           
         </div>
     </div>
    
@@ -596,13 +596,13 @@
         // Get data from localStorage
         document.addEventListener('DOMContentLoaded', function() {
             // Get exam information
-            const examInfo = localStorage.getItem('examInfo') ;
-            const examClass = localStorage.getItem('examClass') ;
-            const examSubject = localStorage.getItem('examSubject');
+            const examInfo = localStorage.getItem('examInfo') || '';
+            const examClass = localStorage.getItem('examClass') || '';
+            const examSubject = localStorage.getItem('examSubject') || '';
            
             // Display exam information
-            document.getElementById('examInfoHeader').textContent = `${examSubject.toUpperCase()} EXAMINATION RESULTS`;
-            document.getElementById('examDetails').textContent = examInfo;
+            document.getElementById('examInfoHeader').textContent = examSubject ? `${examSubject.toUpperCase()} EXAMINATION RESULTS` : 'EXAMINATION RESULTS';
+            document.getElementById('examDetails').textContent = examInfo || 'Exam Results';
            
             // Get student information
             const username = localStorage.getItem('examUser') || sessionStorage.getItem('username') || 'Student';
