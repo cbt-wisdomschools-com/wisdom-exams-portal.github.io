@@ -387,28 +387,28 @@
 
         const subjectPasswords = {
               demo:"demo",
-              mathematics: "abc123",                                                              
-              english_language: "abc123",                                                           
+              mathematics: "math123",                                                              
+              english_language: "eng123",                                                           
               citizenship_education: "abc123",                                                              
               physics: "abc123",                                                               
               digital_technology: "abc123",                                                           
-              economics: "abc123",                                                               
-              livestock_farming: "abc123",                                                               
-              chemistry: "abc123",                                                               
-              biology: "abc123",                                                             
-              cultural_art: "abc123",                                                               
-              yoruba: "abc123",                                                               
-              geography: "abc123",                                                              
+              economics: "eco123",                                                               
+              livestock_farming: "liv123",                                                               
+              chemistry: "chem123",                                                               
+              biology: "bio123",                                                             
+              cultural_art: "art123",                                                               
+              yoruba: "yor789",                                                               
+              geography: "goe456",                                                              
               crs: "abc123",                                                               
-              account: "abc123",                                                               
-              government: "abc123",                                                               
-              commerce: "abc123",                                                              
-              literature_in_english: "abc123",                                                               
-              marketing: "abc123",                                                               
-              fine_art: "abc123",                                                              
-              phonics: "abc123",                                                          
-              further_mathematics: "abc123",                                                              
-              music: "abc123",
+              account: "acc123",                                                               
+              government: "govt123",                                                               
+              commerce: "comm123",                                                              
+              literature_in_english: "lit123",                                                               
+              marketing: "mkt123",                                                               
+              fine_art: "art123",                                                              
+              phonics: "pho123",                                                          
+              further_mathematics: "fmath123",                                                              
+              music: "mus123",
               history:"his123"
         };
 
@@ -463,7 +463,7 @@
         }
 
         // 🚀 Updated start exam function
-        function startExam() {
+        /*function startExam() {
             const cls = document.getElementById("classSelect").value.toLowerCase();
             const sub = document.getElementById("subjectSelect").value.toLowerCase();
             const type = document.getElementById("typeSelect").value.toLowerCase();
@@ -501,7 +501,64 @@
             const redirectUrl = `${cls}_${sub}_exam.html`; // Your existing exam page
             alert(`✅ Access granted! Redirecting to exam...`);
             window.location.href = redirectUrl;
-        }
+        }*/
+         function startExam() {
+		    const cls = document.getElementById("classSelect").value.toLowerCase();
+		    const sub = document.getElementById("subjectSelect").value.toLowerCase();
+		    const type = document.getElementById("typeSelect").value.toLowerCase();
+		    const pass = document.getElementById("examPassword").value.trim();
+
+		    if (!cls || !sub || !pass) {
+		        alert("Please complete all selections before starting your exam.");
+		        return;
+		    }
+
+		    const correctPassword = subjectPasswords[sub];
+		    if (pass !== correctPassword) {
+		        alert("❌ Incorrect password for this subject!");
+		        return;
+		    }
+
+		    // Check completed exam
+		    if (hasCompletedExam(cls, sub, username)) {
+		        alert("⚠️ You have already completed this exam.");
+		        window.location.href = "exam_attempted.html";
+		        return;
+		    }
+
+		    // Save data
+		    sessionStorage.setItem("class", cls);
+		    sessionStorage.setItem("subject", sub);
+		    sessionStorage.setItem("type", type);
+		    sessionStorage.setItem("examInfo", `${formatSubjectName(sub)} - ${cls.toUpperCase()} (FIRST TERM)`);
+
+		    localStorage.setItem("examClass", cls);
+		    localStorage.setItem("examSubject", formatSubjectName(sub));
+		    localStorage.setItem("pendingAttempt", "true");
+
+		    const redirectUrl = `${cls}_${sub}_exam.html`;
+
+		    // 🔍 CHECK IF THE FILE EXISTS BEFORE REDIRECTING
+		    fetch(redirectUrl, { method: "HEAD" })
+		        .then(response => {
+		            if (response.ok) {
+		                // File exists → redirect normally
+		                alert(`✅ Access granted! Redirecting to exam...`);
+		                window.location.href = redirectUrl;
+		            } else {
+		                // File missing → send user to landing page
+		                alert("⚠️ Exam page not available yet. Redirecting...");
+		                window.location.href = "landing.html";
+		            }
+		        })
+		        .catch(() => {
+		            // If fetch fails completely
+		            alert("⚠️ Exam page not available yet. Redirecting...");
+		            window.location.href = "landing.html";
+		        });
+		}
+
+
 
         function formatSubjectName(subject) {
             const subjectMap = {

@@ -275,7 +275,7 @@
 <body>
     <div class="container">
         <header>
-            <button class="admin-btn" onclick="goToAdmin()">Admin Panel</button>
+            <!--<button class="admin-btn" onclick="goToAdmin()">Admin Panel</button>-->
             <button class="logout-btn" onclick="logout()">Logout</button>
             <div class="logo-container">
                 <div class="logo">
@@ -323,7 +323,7 @@
                         <option value="digital_technology">Digital & Computer Technology</option>
                         <option value="home_economics">Home Economics</option>
                         <option value="livestock_farming">Livestock Farming</option>
-                        <option value="social_studies">Social|Citenzenship Education|Studies</option>
+                        <option value="social_Studies">Social  |  Citizenship Studies</option>
                         <option value="business_studies">Business Studies</option>
                         <option value="cultural_and_creative_art">Cultural & Creative Art</option>
                         <option value="yoruba">Yoruba</option>
@@ -552,7 +552,7 @@
         }
 
         // 🚀 Updated start exam function
-        function startExam() {
+       /* function startExam() {
             const cls = document.getElementById("classSelect").value.toLowerCase();
             const sub = document.getElementById("subjectSelect").value.toLowerCase();
             const type = document.getElementById("typeSelect").value.toLowerCase();
@@ -590,7 +590,63 @@
             const redirectUrl = `${cls}_${sub}_exam.html`; // Your existing exam page
             alert(`✅ Access granted! Redirecting to exam...`);
             window.location.href = redirectUrl;
-        }
+        }*/
+		 function startExam() {
+		    const cls = document.getElementById("classSelect").value.toLowerCase();
+		    const sub = document.getElementById("subjectSelect").value.toLowerCase();
+		    const type = document.getElementById("typeSelect").value.toLowerCase();
+		    const pass = document.getElementById("examPassword").value.trim();
+
+		    if (!cls || !sub || !pass) {
+		        alert("Please complete all selections before starting your exam.");
+		        return;
+		    }
+
+		    const correctPassword = subjectPasswords[sub];
+		    if (pass !== correctPassword) {
+		        alert("❌ Incorrect password for this subject!");
+		        return;
+		    }
+
+		    // Check completed exam
+		    if (hasCompletedExam(cls, sub, username)) {
+		        alert("⚠️ You have already completed this exam.");
+		        window.location.href = "exam_attempted.html";
+		        return;
+		    }
+
+		    // Save data
+		    sessionStorage.setItem("class", cls);
+		    sessionStorage.setItem("subject", sub);
+		    sessionStorage.setItem("type", type);
+		    sessionStorage.setItem("examInfo", `${formatSubjectName(sub)} - ${cls.toUpperCase()} (FIRST TERM)`);
+
+		    localStorage.setItem("examClass", cls);
+		    localStorage.setItem("examSubject", formatSubjectName(sub));
+		    localStorage.setItem("pendingAttempt", "true");
+
+		    const redirectUrl = `${cls}_${sub}_exam.html`;
+
+		    // 🔍 CHECK IF THE FILE EXISTS BEFORE REDIRECTING
+		    fetch(redirectUrl, { method: "HEAD" })
+		        .then(response => {
+		            if (response.ok) {
+		                // File exists → redirect normally
+		                alert(`✅ Access granted! Redirecting to exam...`);
+		                window.location.href = redirectUrl;
+		            } else {
+		                // File missing → send user to landing page
+		                alert("⚠️ Exam page not available yet. Redirecting...");
+		                window.location.href = "landing.html";
+		            }
+		        })
+		        .catch(() => {
+		            // If fetch fails completely
+		            alert("⚠️ Exam page not available yet. Redirecting...");
+		            window.location.href = "landing.html";
+		        });
+		}
+
 
         function formatSubjectName(subject) {
             const subjectMap = {
