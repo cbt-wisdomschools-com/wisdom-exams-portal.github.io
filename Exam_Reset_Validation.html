@@ -308,13 +308,9 @@
                 <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
                 <li><a href="#"><i class="fas fa-question-circle"></i> Help</a></li>
-                <li><a href="Exam_Reset_Validation.html"><i class="fas fa-cogs"></i>Reset </a></li>
                 <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
                 <li><a href="#"><i class="fas fa-cogs"></i> Services</a></li>
                 <li><a href="index.html"><i class="fas fa-cogs"></i> Sign Out</a></li>
-
-                
-                 
             </ul>
             <div>
                 <button class="theme-toggle" id="themeToggle">
@@ -350,36 +346,23 @@
 
              <div class="exam-sections">
             <div class="exam-section">
-                <div class="section-header">WISDOM  COLLEGE JUNIOR SECONDARY</div>
+                <div class="section-header"><span style="visibility: hidden;">--------------------------------------------------</span>ENTER PASSWORD TO RESET EXAM ATTEMPT FOR STUDENTS</div>
                 <div class="section-body">
-                <p class="instructions"><span style="visibility: hidden; color: red;">----------------------------------------</span>JUNIOR CATEGORY </p>
+                <p class="instructions"><span style="visibility: hidden; color: red;">-----------------------------------------------------------------</span>TYPE PASSWORD TO RESET ATTEMPT BELOW</p>
                    
                  <div class="input-group">
                         
-                       <input type="password" id="input1" placeholder="Junior">
+                       <input type="password" id="input1" placeholder="Enter Admin Password To Reset students Exam Attempt ">
                         <button onclick="checkInput1()" class="btn">Enter</button>
                     </div>
                 </div>
             </div>
 
-              <div class="exam-section">
-                <div class="section-header">WISDOM  COLLEGE SENIOR SECONDARY □</div>
-                <div class="section-body">
-                    <p class="instructions"  color: red;><span style="visibility: hidden;">--------------------------------------</span>SENIOR CATEGORY </p>
-                   
-                    <div class="input-group">
-                           <input type="password" id="input2" placeholder="Senior">
-                            <button onclick="checkInput2()"class="btn">Enter</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-        <div class="windows-activate">
-           <p>&copy; cbt.wisdomschools.org. All rights reserved.</p>
-          
-        </div>
+   
+     
+        
     </div>
+    <div><footer><center><p>&copy; cbt.wisdomschools.org. All rights reserved.</p></center></footer></div>
            
 
 
@@ -394,22 +377,22 @@ document.getElementById('user').innerText = sessionStorage.getItem('username');
 document.getElementById('userImage').src = sessionStorage.getItem('image');
 
 function checkInput1() {
-    if(document.getElementById('input1').value === 'junior') {
+    if(document.getElementById('input1').value === 'admin_reset') {
         sessionStorage.setItem('userType', 'junior');
-        window.location.href = 'index_junior.html';
+        window.location.href = 'Exam_reset.html';
     } else {
-        alert('Incorrect input for Junior');
+        alert('Incorrect Password  ');
     }
 }
 
-function checkInput2() {
+/*function checkInput2() {
     if(document.getElementById('input2').value === 'senior') {
         sessionStorage.setItem('userType', 'senior');
         window.location.href = 'index_senior.html';
     } else {
         alert('Incorrect input for Senior');
     }
-}
+}*/
 
 
    // Theme toggle functionality
