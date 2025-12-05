@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="fav_icon2.ico">
-    <title>cbt.wisdomschools.org -EKITI VALUES   Exam</title>
+    <title>cbt.wisdomschools.org - PHYSICS    Exam</title>
     <script>
          // Disable back navigation
     history.pushState(null, null, location.href);
@@ -507,7 +507,7 @@
         </div>
        
         <div class="exam-info">
-            Exam: <span id="examInfo" style="color: lime;">  EKITI VALUES   - JSS2 (FIRST TERM)</span>
+            Exam: <span id="examInfo" style="color: lime;">   PHYSICS    - SS3 (FIRST TERM)</span>
         </div>
        
         <div id="timer"></div>
@@ -584,363 +584,789 @@
     
         // ================== STATIC QUESTIONS DATA ==================
    const staticObjectivesQuestions = [
-                                          {
+                                            {
       "id": 1,
-      "question": "The traditional economy simply refers to the",
+      "question": "Which of the following is a scalar quantity?",
       "options": {
-        "A": "Culture and customs",
-        "B": "Legitimate job",
-        "C": "Goods and services",
-        "D": "Skill"
+        "A": "Velocity",
+        "B": "Force",
+        "C": "Energy",
+        "D": "Momentum"
       },
-      "answer": "A"
+      "answer": "C",
+      "image": ""
     },
     {
       "id": 2,
-      "question": "Ekiti traditional economy is largely based on",
+      "question": "The vector having magnitude 1 is called",
       "options": {
-        "A": "Fishing",
-        "B": "Agriculture",
-        "C": "Mining",
-        "D": "Driving"
+        "A": "Null vector",
+        "B": "Unit vector",
+        "C": "Position vector",
+        "D": "Negative vector"
       },
-      "answer": "B"
+      "answer": "B",
+      "image": ""
     },
     {
       "id": 3,
-      "question": "Which of the following is the most important function of agriculture",
+      "question": "If →A + →B = →C and A + B = C, then vector →C is",
       "options": {
-        "A": "To produce pencils",
-        "B": "Making roads",
-        "C": "Food production",
-        "D": "Making bridges"
+        "A": "Perpendicular to →A + →B",
+        "B": "Parallel to →A + →B",
+        "C": "Zero",
+        "D": "None"
       },
-      "answer": "C"
+      "answer": "B",
+      "image": ""
     },
     {
       "id": 4,
-      "question": "Agriculture has two main branches",
+      "question": "The dot product of two perpendicular vectors is",
       "options": {
-        "A": "Air and gas",
-        "B": "Water and soil",
-        "C": "Toilet and faeces",
-        "D": "Planting of crops and rearing of animals"
+        "A": "Maximum",
+        "B": "Zero",
+        "C": "Unity",
+        "D": "Infinite"
       },
-      "answer": "D"
+      "answer": "B",
+      "image": ""
     },
     {
       "id": 5,
-      "question": "Cotton and Textile industry largely relies on",
+      "question": "The magnitude of the resultant of two equal vectors acting at 120° is",
       "options": {
-        "A": "Banking",
-        "B": "Engineering",
-        "C": "Geography",
-        "D": "Agriculture"
+        "A": "Zero",
+        "B": "2a",
+        "C": "a",
+        "D": "a/√3"
       },
-      "answer": "D"
+      "answer": "C",
+      "image": ""
     },
     {
       "id": 6,
-      "question": "Food crops include all the following except",
+      "question": "Newton’s first law is also known as",
       "options": {
-        "A": "Rubber",
-        "B": "Yam",
-        "C": "Cassava",
-        "D": "Cocoyam"
+        "A": "Law of inertia",
+        "B": "Law of action-reaction",
+        "C": "Law of force",
+        "D": "All"
       },
-      "answer": "A"
+      "answer": "A",
+      "image": ""
     },
     {
       "id": 7,
-      "question": "Cash crops refers to all the following except",
+      "question": "The acceleration produced in a body is proportional to",
       "options": {
-        "A": "Oil palm",
-        "B": "Cocoyam",
-        "C": "Cocoa",
-        "D": "Coconut"
+        "A": "Net force",
+        "B": "Mass",
+        "C": "Velocity",
+        "D": "Displacement"
       },
-      "answer": "B"
+      "answer": "A",
+      "image": ""
     },
     {
       "id": 8,
-      "question": "All the following refers to the animals Ekiti people are rearing except",
+      "question": "A body of mass 5 kg is acted upon by a force of 20 N. Its acceleration is",
       "options": {
-        "A": "Goats",
-        "B": "Fowls",
-        "C": "Elephant",
-        "D": "Sheep"
+        "A": "100 m/s²",
+        "B": "4 m/s²",
+        "C": "25 m/s²",
+        "D": "1 m/s²"
       },
-      "answer": "C"
+      "answer": "B",
+      "image": ""
     },
     {
       "id": 9,
-      "question": "All the following refers to the weaving products except",
+      "question": "Action and reaction forces act on",
       "options": {
-        "A": "Mat",
-        "B": "Cloth",
-        "C": "Hair",
-        "D": "Nose"
+        "A": "Same body",
+        "B": "Different bodies",
+        "C": "Same direction",
+        "D": "Perpendicular"
       },
-      "answer": "C"
+      "answer": "B",
+      "image": ""
     },
     {
       "id": 10,
-      "question": "The process by which raw cotton is processed and converted to clothing is called",
+      "question": "The equation v = u + at is",
       "options": {
-        "A": "Running",
-        "B": "Jogging",
-        "C": "Jumping",
-        "D": "Weaving"
+        "A": "First equation of motion",
+        "B": "Second",
+        "C": "Third",
+        "D": "None"
       },
-      "answer": "D"
-    },
-    {
+      "answer": "B",
+      "image": ""
+},
+ {
       "id": 11,
-      "question": "Which of the following is the replacement for traditional mat bed nowadays",
+      "question": "The equation s = ut + ½ at² represents",
       "options": {
-        "A": "Foam Mattresses",
-        "B": "Pillow case",
-        "C": "Bedsheet cover",
-        "D": "Floor tiles"
+        "A": "Second equation",
+        "B": "First",
+        "C": "Third",
+        "D": "Fourth"
       },
-      "answer": "A"
+      "answer": "A",
+      "image": ""
     },
     {
       "id": 12,
-      "question": "Mat weaving production is popular in one of the following towns",
+      "question": "A body falling freely under gravity has acceleration",
       "options": {
-        "A": "Otun",
-        "B": "Lagos",
-        "C": "Ibadan",
-        "D": "London"
+        "A": "Zero",
+        "B": "9.8 m/s²",
+        "C": "9.8 m/s² downward",
+        "D": "Variable"
       },
-      "answer": "A"
+      "answer": "C",
+      "image": ""
     },
     {
       "id": 13,
-      "question": "Which of the following materials is required in producing pots traditionally",
+      "question": "In projectile motion, the horizontal component of velocity",
       "options": {
-        "A": "Clay",
-        "B": "Cement",
-        "C": "Sand",
-        "D": "Stones"
+        "A": "Increases",
+        "B": "Decreases",
+        "C": "Remains constant",
+        "D": "First increases then decreases"
       },
-      "answer": "A"
+      "answer": "C",
+      "image": ""
     },
     {
       "id": 14,
-      "question": "The art of twisting and joining pieces hair into different shapes and styles is known as",
+      "question": "Time of flight of a projectile projected at angle θ is",
       "options": {
-        "A": "Plaiting",
-        "B": "Pedicure",
-        "C": "Manicure",
-        "D": "Plaiting"
+        "A": "(2u sinθ)/g",
+        "B": "(u sinθ)/g",
+        "C": "(2u sinθ)/g",
+        "D": "(u cosθ)/g"
       },
-      "answer": "A"
+      "answer": "C",
+      "image": ""
     },
     {
       "id": 15,
-      "question": "Which of the following is not among the group",
+      "question": "Maximum range of a projectile is obtained when angle of projection is",
       "options": {
-        "A": "Face – me",
-        "B": "Suku",
-        "C": "Koroba",
-        "D": "Koju si oko"
+        "A": "30°",
+        "B": "60°",
+        "C": "45°",
+        "D": "90°"
       },
-      "answer": "A"
+      "answer": "C",
+      "image": ""
     },
     {
       "id": 16,
-      "question": "All the following animals are poultry except",
+      "question": "At the highest point of a projectile, its velocity is",
       "options": {
-        "A": "Pigs",
-        "B": "Chickens",
-        "C": "Ducks",
-        "D": "Turkeys"
+        "A": "Zero",
+        "B": "Maximum",
+        "C": "u cosθ",
+        "D": "u sinθ"
       },
-      "answer": "A"
+      "answer": "C",
+      "image": ""
     },
     {
       "id": 17,
-      "question": "Which of the following is not a white collar job",
+      "question": "The trajectory of a projectile is",
       "options": {
-        "A": "Mechanic",
-        "B": "Teacher",
-        "C": "Banker",
-        "D": "Lawyers"
+        "A": "Straight line",
+        "B": "Parabola",
+        "C": "Circle",
+        "D": "Hyperbola"
       },
-      "answer": "A"
+      "answer": "B",
+      "image": ""
     },
     {
       "id": 18,
-      "question": "A place where rearing of fishes normally take place artificially is known as",
+      "question": "Mechanical advantage of an ideal machine is",
       "options": {
-        "A": "Ponds",
-        "B": "River",
-        "C": "Stadium",
-        "D": "Museum"
+        "A": "Less than 1",
+        "B": "Equal to 1",
+        "C": "Greater than 1",
+        "D": "Zero"
       },
-      "answer": "A"
+      "answer": "B",
+      "image": ""
     },
     {
       "id": 19,
-      "question": "Fish is compared as a major source of",
+      "question": "Velocity ratio of a single movable pulley is",
       "options": {
-        "A": "Protein",
-        "B": "Fats and oil",
-        "C": "Carbohydrate",
-        "D": "Vitamins"
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
       },
-      "answer": "A"
+      "answer": "B",
+      "image": ""
     },
     {
       "id": 20,
-      "question": "Which of the following town is famous for local rice production",
+      "question": "Efficiency of a machine is always",
       "options": {
-        "A": "Igbemo Ekiti",
-        "B": "Ado – Ekiti",
-        "C": "Ilawe - Ekiti",
-        "D": "Ikole – Ekiti"
+        "A": "100%",
+        "B": "Less than 100%",
+        "C": "Greater than 100%",
+        "D": "Zero"
       },
-      "answer": "A"
+      "answer": "B",
+      "image": ""
     },
     {
       "id": 21,
-      "question": "Which of the following Ekiti seemed to have been derived",
+      "question": "Inclined plane is used to",
       "options": {
-        "A": "Akiti",
-        "B": "Okiti",
-        "C": "Okete",
-        "D": "Okele"
+        "A": "Reduce effort",
+        "B": "Increase effort",
+        "C": "Multiply force only",
+        "D": "None"
       },
-      "answer": "B"
+      "answer": "A",
+      "image": ""
     },
     {
       "id": 22,
-      "question": "Ekiti State is surrounded by",
+      "question": "The distance between two consecutive crests is called",
       "options": {
-        "A": "Valley",
-        "B": "Hills",
-        "C": "Expressway",
-        "D": "Contour"
+        "A": "Frequency",
+        "B": "Time period",
+        "C": "Wavelength",
+        "D": "Amplitude"
       },
-      "answer": "B"
+      "answer": "C",
+      "image": ""
     },
     {
       "id": 23,
-      "question": "Which of the following ethnic group does Ekiti people belongs",
+      "question": "Speed of wave =",
       "options": {
-        "A": "Hausa",
-        "B": "Yoruba",
-        "C": "Igbo",
-        "D": "Ebirra"
+        "A": "Frequency × Time period",
+        "B": "Frequency × Wavelength",
+        "C": "Wavelength / Time period",
+        "D": "Amplitude × Frequency"
       },
-      "answer": "B"
+      "answer": "B",
+      "image": ""
     },
     {
       "id": 24,
-      "question": "The great grandfather of Yoruba people is",
+      "question": "Sound cannot travel through",
       "options": {
-        "A": "Mohammed",
-        "B": "Oduduwa",
-        "C": "Moses",
-        "D": "Elijah"
+        "A": "Air",
+        "B": "Water",
+        "C": "Steel",
+        "D": "Vacuum"
       },
-      "answer": "B"
+      "answer": "D",
+      "image": ""
     },
     {
       "id": 25,
-      "question": "All the following states share boundary with Ekiti State except",
+      "question": "In a transverse wave, particles vibrate",
       "options": {
-        "A": "Kwara state",
-        "B": "Kano state",
-        "C": "Ondo State",
-        "D": "Kogi State"
+        "A": "Parallel to wave direction",
+        "B": "Perpendicular to wave direction",
+        "C": "In circles",
+        "D": "Randomly"
       },
-      "answer": "B"
+      "answer": "B",
+      "image": ""
     },
     {
       "id": 26,
-      "question": "Tourism is the act of going out from home to spend time for",
+      "question": "The SI unit of frequency is",
       "options": {
-        "A": "Sporting",
-        "B": "Pleasure",
-        "C": "Driving",
-        "D": "Fishing"
+        "A": "Meter",
+        "B": "Second",
+        "C": "Hertz",
+        "D": "Newton"
       },
-      "answer": "B"
+      "answer": "C",
+      "image": ""
     },
     {
       "id": 27,
-      "question": "All the following are tourism attraction in Ekiti state except",
+      "question": "The speed of sound in air at 20°C is approximately",
       "options": {
-        "A": "Water fall in Ipole Iloro",
-        "B": "Wisdom College",
-        "C": "Olosunta hills",
-        "D": "Overhead bridge in Ado – Ekiti"
+        "A": "280 m/s",
+        "B": "340 m/s",
+        "C": "400 m/s",
+        "D": "500 m/s"
       },
-      "answer": "B"
+      "answer": "B",
+      "image": ""
     },
     {
       "id": 28,
-      "question": "Agro economy simply means",
+      "question": "Echo is caused due to",
       "options": {
-        "A": "Engineering",
-        "B": "Agriculture",
-        "C": "Banking",
-        "D": "Philosophy"
+        "A": "Refraction",
+        "B": "Diffraction",
+        "C": "Reflection",
+        "D": "Interference"
       },
-      "answer": "B"
+      "answer": "C",
+      "image": ""
     },
     {
       "id": 29,
-      "question": "The art of milk production by farm animals is known as",
+      "question": "The sensation of pitch depends on",
       "options": {
-        "A": "Beef production",
-        "B": "Dairy production",
-        "C": "Mutton production",
-        "D": "Pork production"
+        "A": "Amplitude",
+        "B": "Frequency",
+        "C": "Speed",
+        "D": "Wavelength"
       },
-      "answer": "B"
+      "answer": "B",
+      "image": ""
     },
     {
       "id": 30,
-      "question": "Which of the following is the opposite of peace",
+      "question": "Loudness of sound depends on",
       "options": {
-        "A": "Love",
-        "B": "Conflict and war",
-        "C": "Progressive",
-        "D": "Backwardness"
+        "A": "Amplitude",
+        "B": "Frequency",
+        "C": "Speed",
+        "D": "Medium"
       },
-      "answer": "B"
+      "answer": "A",
+      "image": ""
+    },
+    {
+      "id": 31,
+      "question": "The audible frequency range for human ear is",
+      "options": {
+        "A": "Less than 20 Hz",
+        "B": "20 Hz to 20,000 Hz",
+        "C": "More than 20 kHz",
+        "D": "0 to 10 Hz"
+      },
+      "answer": "B",
+      "image": ""
+    },
+    {
+      "id": 32,
+      "question": "Ultrasonic waves have frequency",
+      "options": {
+        "A": "Below 20 Hz",
+        "B": "Above 20 kHz",
+        "C": "Between 20–20000 Hz",
+        "D": "1 MHz only"
+      },
+      "answer": "B",
+      "image": ""
+    },
+    {
+      "id": 33,
+      "question": "The speed of sound is maximum in",
+      "options": {
+        "A": "Air",
+        "B": "Water",
+        "C": "Steel",
+        "D": "Vacuum"
+      },
+      "answer": "C",
+      "image": ""
+    },
+    {
+      "id": 34,
+      "question": "The minimum distance required to hear a distinct echo (speed = 340 m/s) is",
+      "options": {
+        "A": "10 m",
+        "B": "17 m",
+        "C": "34 m",
+        "D": "50 m"
+      },
+      "answer": "B",
+      "image": ""
+    },
+    {
+      "id": 35,
+      "question": "The angle of incidence is equal to the angle of reflection. This is",
+      "options": {
+        "A": "Law of reflection",
+        "B": "Law of refraction",
+        "C": "Dispersion",
+        "D": "Diffraction"
+      },
+      "answer": "A",
+      "image": ""
+    },
+    {
+      "id": 36,
+      "question": "The image formed by a plane mirror is",
+      "options": {
+        "A": "Real, inverted",
+        "B": "Virtual, erect",
+        "C": "Real, erect",
+        "D": "Virtual, inverted"
+      },
+      "answer": "B",
+      "image": ""
+    },
+    {
+      "id": 37,
+      "question": "When light goes from air to glass, its speed",
+      "options": {
+        "A": "Increases",
+        "B": "Decreases",
+        "C": "Remains same",
+        "D": "Becomes zero"
+      },
+      "answer": "B",
+      "image": ""
+    },
+    {
+      "id": 38,
+      "question": "The refractive index of glass is 1.5. This means light travels in glass",
+      "options": {
+        "A": "1.5 times faster",
+        "B": "1.5 times slower than in vacuum",
+        "C": "Same speed",
+        "D": "1.5 times faster"
+      },
+      "answer": "B",
+      "image": ""
+    },
+    {
+      "id": 39,
+      "question": "The splitting of white light into seven colours is called",
+      "options": {
+        "A": "Reflection",
+        "B": "Refraction",
+        "C": "Dispersion",
+        "D": "Interference"
+      },
+      "answer": "C",
+      "image": ""
+    },
+    {
+      "id": 40,
+      "question": "Myopia is corrected by using",
+      "options": {
+        "A": "Convex lens",
+        "B": "Concave lens",
+        "C": "Cylindrical lens",
+        "D": "Bifocal lens"
+      },
+      "answer": "B",
+      "image": ""
+    },
+    {
+      "id": 41,
+      "question": "The power of a lens is +2D. It is",
+      "options": {
+        "A": "Convex",
+        "B": "Concave",
+        "C": "Plano-convex",
+        "D": "Cannot say"
+      },
+      "answer": "A",
+      "image": ""
+    },
+    {
+      "id": 42,
+      "question": "The focal length of a lens of power –5D is",
+      "options": {
+        "A": "5 cm",
+        "B": "50 cm",
+        "C": "–20 cm",
+        "D": "20 cm"
+      },
+      "answer": "C",
+      "image": ""
+    },
+    {
+      "id": 43,
+      "question": "Rainbow is formed due to",
+      "options": {
+        "A": "Reflection only",
+        "B": "Refraction only",
+        "C": "Dispersion, refraction and total internal reflection",
+        "D": "Diffraction"
+      },
+      "answer": "C",
+      "image": ""
+    },
+    {
+      "id": 44,
+      "question": "The SI unit of heat is",
+      "options": {
+        "A": "Calorie",
+        "B": "Joule",
+        "C": "Watt",
+        "D": "Kelvin"
+      },
+      "answer": "B",
+      "image": ""
+    },
+    {
+      "id": 45,
+      "question": "1 calorie =",
+      "options": {
+        "A": "4.186 J",
+        "B": "4186 J",
+        "C": "0.4186 J",
+        "D": "1 J"
+      },
+      "answer": "A",
+      "image": ""
+    },
+    {
+      "id": 46,
+      "question": "Specific heat of water is",
+      "options": {
+        "A": "4200 J/kg·K",
+        "B": "4186 J/kg·K",
+        "C": "2100 J/kg·K",
+        "D": "900 J/kg·K"
+      },
+      "answer": "B",
+      "image": ""
+    },
+    {
+      "id": 47,
+      "question": "Latent heat of vaporization of water is",
+      "options": {
+        "A": "336 J/g",
+        "B": "2260 J/g",
+        "C": "540 cal/g",
+        "D": "Both B & C"
+      },
+      "answer": "D",
+      "image": ""
+    },
+    {
+      "id": 48,
+      "question": "Heat required to convert 1 g of ice at 0°C to steam at 100°C is",
+      "options": {
+        "A": "100 cal",
+        "B": "616 cal",
+        "C": "716 cal",
+        "D": "540 cal"
+      },
+      "answer": "C",
+      "image": ""
+    },
+    {
+      "id": 49,
+      "question": "The principle of calorimetry is",
+      "options": {
+        "A": "Heat lost = Heat gained",
+        "B": "Heat lost > Heat gained",
+        "C": "Heat created",
+        "D": "Heat destroyed"
+      },
+      "answer": "A",
+      "image": ""
+    },
+    {
+      "id": 50,
+      "question": "When ice melts, its temperature",
+      "options": {
+        "A": "Increases",
+        "B": "Decreases",
+        "C": "Remains constant",
+        "D": "First increases then constant"
+      },
+      "answer": "C",
+      "image": ""
+    },
+    {
+      "id": 51,
+      "question": "The acceleration due to gravity on moon is g/6. The weight of a body on moon will be",
+      "options": {
+        "A": "Same",
+        "B": "1/6th",
+        "C": "6 times",
+        "D": "Zero"
+      },
+      "answer": "B",
+      "image": ""
+    },
+    {
+      "id": 52,
+      "question": "The mirror used in vehicles as rear-view mirror is",
+      "options": {
+        "A": "Concave",
+        "B": "Convex",
+        "C": "Plane",
+        "D": "Parabolic"
+      },
+      "answer": "B",
+      "image": ""
+    },
+    {
+      "id": 53,
+      "question": "The velocity of sound increases with increase in",
+      "options": {
+        "A": "Pressure",
+        "B": "Temperature",
+        "C": "Humidity",
+        "D": "All"
+      },
+      "answer": "B",
+      "image": ""
+    },
+    {
+      "id": 54,
+      "question": "The wavelength of audible sound is",
+      "options": {
+        "A": "1 cm to 1 m",
+        "B": "1.7 cm to 17 m",
+        "C": "17 m to 34 m",
+        "D": "0.1 mm to 1 mm"
+      },
+      "answer": "B",
+      "image": ""
+    },
+    {
+      "id": 55,
+      "question": "The relation between velocity (v), frequency (f) and wavelength (λ) is",
+      "options": {
+        "A": "v = fλ",
+        "B": "v = fλ",
+        "C": "f = vλ",
+        "D": "λ = vf"
+      },
+      "answer": "B",
+      "image": ""
+    },
+    {
+      "id": 56,
+      "question": "The unit of power of a lens is",
+      "options": {
+        "A": "Watt",
+        "B": "Joule",
+        "C": "Diopter",
+        "D": "Meter"
+      },
+      "answer": "C",
+      "image": ""
+    },
+    {
+      "id": 57,
+      "question": "In a simple pendulum, the time period depends on",
+      "options": {
+        "A": "Mass",
+        "B": "Amplitude",
+        "C": "Length",
+        "D": "Material"
+      },
+      "answer": "C",
+      "image": ""
+    },
+    {
+      "id": 58,
+      "question": "The magnitude of gravitational force between two bodies is F. If distance is doubled, new force is",
+      "options": {
+        "A": "4F",
+        "B": "2F",
+        "C": "F/4",
+        "D": "F/2"
+      },
+      "answer": "C",
+      "image": ""
+    },
+    {
+      "id": 59,
+      "question": "The image formed by a convex lens can be",
+      "options": {
+        "A": "Virtual only",
+        "B": "Real only",
+        "C": "Both real and virtual",
+        "D": "Neither"
+      },
+      "answer": "C",
+      "image": ""
+    },
+    {
+      "id": 60,
+      "question": "When a ray of light enters from air to water, its wavelength",
+      "options": {
+        "A": "Increases",
+        "B": "Decreases",
+        "C": "Remains same",
+        "D": "Becomes zero"
+      },
+      "answer": "B",
+      "image": ""
     }
 ];
 
  const staticTheoryQuestions = [
-                             {
-                    "id": 1,
-                    "question": "What is brooding? What is incubation? Mention two types of incubation.",
-                    "marks": 10,
-                    "image": null
-                  },
-                  {
-                    "id": 2,
-                    "question": "Mention five poultry equipments.",
-                    "marks": 10,
-                    "image": null
-                  },
-                  {
-                    "id": 3,
-                    "question": "What are chick, broiler, chicken, layer and cockerel?",
-                    "marks": 10,
-                    "image": null
-                  },
-                  {
-                    "id": 4,
-                    "question": "Mention four ways of maintaining farm buildings and structures.",
-                    "marks": 10,
-                    "image": null
-                  }
+              {
+      "id": 1,
+      "question": "Distinguish clearly between a progressive (travelling) wave and a standing (stationary) wave in terms of (i) energy transfer, (ii) phase difference between particles, (iii) amplitude variation along the medium, and (iv) node/antinode formation. Derive the equation of a standing wave formed by superposition of two identical progressive waves travelling in opposite directions.",
+      "marks": "",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "question": "Two sound waves of frequencies 512 Hz and 516 Hz are sounded simultaneously. (a) Explain the phenomenon of beats and calculate the beat frequency. (b) Derive the expression for the resultant intensity as a function of time. (c) At what phase difference between the two waves will the intensity be (i) maximum and (ii) minimum?",
+      "marks": "",
+      "image": ""
+    },
+    {
+      "id": 3,
+      "question": "An open organ pipe and a closed organ pipe have the same length L and both are sounding their fundamental notes. (a) Draw neat diagrams showing the pressure and displacement variations for the fundamental mode in both pipes. (b) Prove that the fundamental frequency of the open pipe is twice that of the closed pipe. (c) If the speed of sound is 340 m/s and L = 0.5 m, calculate the fundamental frequencies of both pipes.",
+      "marks": "",
+      "image": ""
+    },
+    {
+      "id": 4,
+      "question": "Derive the general Doppler formula for the observed frequency when (i) source is moving towards the observer, (ii) observer is moving towards the source, (iii) both are moving (same or opposite directions). Clearly state the sign convention used. Also explain why no Doppler effect is observed when the motion of source/observer is perpendicular to the line joining them.",
+      "marks": "",
+      "image": ""
+    },
+    {
+      "id": 5,
+      "question": "In Young’s double-slit experiment, monochromatic light of wavelength 600 nm falls on two slits 0.3 mm apart. The interference pattern is observed on a screen 1.5 m away. (a) Derive the condition for bright and dark fringes. (b) Find the distance between the central bright fringe and the 4th bright fringe. (c) If one slit is covered, explain what happens to the pattern and why the average intensity increases four times.",
+      "marks": "",
+      "image": ""
+    },
+    {
+      "id": 6,
+      "question": "(a) Distinguish between Fresnel and Fraunhofer diffraction with examples. (b) Derive the condition for the central maxima, secondary maxima, and minima in single-slit Fraunhofer diffraction. (c) A slit of width 0.2 mm is illuminated by light of wavelength 550 nm. Find the angular width of the central maximum on a screen.",
+      "marks": "",
+      "image": ""
+    },
+    {
+      "id": 7,
+      "question": "(a) Explain with diagrams how unpolarized light can be polarized by (i) reflection (Brewster’s law) and (ii) double refraction. (b) State and prove Brewster’s law. (c) Unpolarized light is incident on a polarizer–analyser pair. The analyser is rotated. Show that the transmitted intensity varies as cos²θ (Malus’ law).",
+      "marks": "",
+      "image": ""
+    },
+    {
+      "id": 8,
+      "question": "Compare Huygens’ wave theory and Newton’s corpuscular theory of light with respect to their explanation of: (i) rectilinear propagation, (ii) reflection and refraction, (iii) interference and diffraction, (iv) speed of light in denser medium. State which phenomena decisively proved the wave nature of light.",
+      "marks": "",
+      "image": ""
+    },
+    {
+      "id": 9,
+      "question": "(a) Explain the phenomenon of dispersion of white light through a prism. Why does violet light deviate the most? (b) Distinguish between Rayleigh scattering and Raman scattering. (c) Using Rayleigh scattering law (I ∝ 1/λ⁴), explain why the sky appears blue during the day and reddish at sunset.",
+      "marks": "",
+      "image": ""
+    },
+    {
+      "id": 10,
+      "question": "(a) Explain the phenomenon of sonoluminescence (light emission when sound waves of very high intensity are passed through a liquid). (b) What extreme physical conditions are believed to be created inside the collapsing bubble? (c) How does this phenomenon provide evidence for the interconversion between mechanical (sound) energy and electromagnetic (light) energy at microscopic scales?",
+      "marks": "",
+      "image": ""
+    }
     
 ];
         // ================== APPLICATION VARIABLES ==================
@@ -1018,12 +1444,12 @@
         };
        
         // ================== TIMER ==================
-        let timeLeft = 60 * 60; // 60 minutes
+        let timeLeft = 90 * 60; // 60 minutes
         const timerEl = document.getElementById('timer');
         const timerInterval = setInterval(() => {
             let min = Math.floor(timeLeft / 60);
             let sec = timeLeft % 60;
-            timerEl.textContent = `Time Remaining: ${min}:${sec < 10 ? '0' + sec : sec}`;
+            timerEl.textContent = `Time Remaining: ${min}:minutes ${sec < 10 ? '0' + sec : sec} Seconds`;
             timeLeft--;
            
             // Change color when time is running out
