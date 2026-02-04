@@ -396,7 +396,7 @@ document.getElementById('userImage').src = sessionStorage.getItem('image');
 function checkInput1() {
     if(document.getElementById('input1').value === 'junior') {
         sessionStorage.setItem('userType', 'junior');
-        window.location.href = 'index_junior.html';
+        window.location.href = 'index_juniors.html';
     } else {
         alert('Incorrect input for Junior');
     }
@@ -405,7 +405,7 @@ function checkInput1() {
 function checkInput2() {
     if(document.getElementById('input2').value === 'senior') {
         sessionStorage.setItem('userType', 'senior');
-        window.location.href = 'index_senior.html';
+        window.location.href = 'index_seniors.html';
     } else {
         alert('Incorrect input for Senior');
     }
